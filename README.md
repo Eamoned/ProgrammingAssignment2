@@ -16,7 +16,7 @@ makeCacheMatrix <- function(x = matrix()) {
            setcache = setcache,                     
            getcache = getcache)
 }
-## Note: "<<-" allows this subfunction to alter the "m" and "x" variable in the containing environment, i.e. the makeCacheMatrix function.
+
 
 cacheSolve <- function(x) {
       m <- x$getcache()   ## gets the inverse matrix (or cache) and assigns it to local variable "m".
@@ -30,6 +30,7 @@ cacheSolve <- function(x) {
       m                    ## and return the inverse 
 }
 
+## Note: "<<-" allows this subfunction to alter the "m" and "x" variable in the containing environment, i.e. the  makeCacheMatrix function.
 ## If we've calculated the inverse of the matrix once already, it will be stored in the cache. When the cacheSolve()
 ## function is run again it grabs the cache, getcache(), and the "if" statement is evaluated to "TRUE"retuning the message
 ## and the inverse matrix m.
