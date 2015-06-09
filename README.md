@@ -17,7 +17,6 @@ makeCacheMatrix <- function(x = matrix()) {
            getcache = getcache)
 }
 
-
 cacheSolve <- function(x) {
       m <- x$getcache()   ## gets the inverse matrix (or cache) and assigns it to local variable "m".
       if(!is.null(m)) {   ## checks if the retuned cache has a value. If there's no values (cache is empty) it jumps to 
